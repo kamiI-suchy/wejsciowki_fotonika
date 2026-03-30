@@ -1,0 +1,12 @@
+1. Co? - wydział, nazwa przedmiotu i ćwiczenia
+2. Kto? - kierunek i semestr, nr zespołu, skład zespołu, prowadzący
+3. Kiedy? - data WYKONANIA ćwiczenia (i miejsce na ocenę)
+4. W jakim celu? - cel ćwiczenia (np. wyznaczenie stałej sprężystości)
+5. Wstęp teoretyczny - krótki (maksymalnie 1 strona A4)
+6. Schemat układu pomiarowego
+7. Spis przyrządów pomiarowych
+8. Przebieg ćwiczenia (najlepiej w punktach)
+9. WYNIKI POMIARÓW wraz z opracowaniem (tabela, obliczenia, WYKRESY, NIERÓWNOŚCI POMIAROWE)
+10. WNIOSKI! - co zmierzono i jak to się ma do wyników spodziewanych czy z literatury
+
+Punkty od 1 do 3 to jedna tabelka
