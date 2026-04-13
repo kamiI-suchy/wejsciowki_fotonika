@@ -1,0 +1,104 @@
+1. Cel ćwiczenia
+
+Celem ćwiczenia jest wyznaczenie ogniskowej soczewki skupiającej dwiema niezależnymi metodami (wzorem soczewkowym oraz metodą Bessela) oraz wyznaczenie ogniskowej soczewki rozpraszającej przy użyciu zestawu z soczewką skupiającą o znanych parametrach.
+
+2. Wstęp teoretyczny
+
+Soczewka cienka to bryła z przezroczystego materiału ograniczona dwiema powierzchniami sferycznymi, której grubość jest pomijalnie mała w porównaniu z promieniami krzywizn i ogniskową. Dla soczewki skupiającej f > 0, dla rozpraszającej f < 0.
+
+Równanie soczewki cienkiej:
+
+gdzie a – odległość przedmiotu od soczewki, b – odległość obrazu od soczewki (b > 0 dla obrazu rzeczywistego). Stąd ogniskową wyznacza się jako:
+
+Zdolność skupiająca (moc optyczna) soczewki:
+
+Metoda Bessela: przy stałej odległości L > 4f między przedmiotem a ekranem istnieją dwa położenia soczewki skupiającej, przy których na ekranie pojawia się ostry obraz – powiększony (S₁) oraz pomniejszony (S₂). Odległość między tymi dwoma położeniami oznaczamy d = |S₂−S₁|. Ogniskową wyznacza się ze wzoru:
+
+Zaletą tej metody jest brak konieczności precyzyjnego ustalenia środka optycznego soczewki, co eliminuje systematyczne błędy wyznaczania a i b.
+
+Układ dwóch cienkich soczewek rozdzielonych odległością d ma wypadkową moc optyczną:
+D_(wyp) = D₁ + D₂ − d ⋅ D₁D₂.
+Stąd moc optyczna nieznanej soczewki:
+
+3. Spis przyrządów pomiarowych
+
+- Ława optyczna ze skalą milimetrową.
+
+- Soczewka skupiająca, nominalna ogniskowa f₁^(nom) = 100 mm.
+
+- Soczewka rozpraszająca, nominalna ogniskowa f₂^(nom) = −200 mm.
+
+- Oświetlony przedmiot (przesłona z wycięciem i źródło światła).
+
+- Ekran (biały, matowy).
+
+- Przyjęta dokładność odczytu skali ławy: a = b = d =
+ L = = 1}.
+
+4. Przebieg ćwiczenia
+
+1. Na ławie optycznej ustawiono kolejno: oświetlony przedmiot P, soczewkę S oraz ekran E.
+
+2. Metoda A (wzór soczewkowy): dla każdego z 4 pomiarów przesunięto soczewkę skupiającą do pozycji dającej ostry obraz na ekranie, odczytano odległości a (przedmiot–soczewka) i b (soczewka–ekran) oraz obliczono L = a + b i f = ab/L.
+
+3. Metoda B (Bessela): ustawiono przedmiot i ekran w stałej odległości L = 57 cm > 4f. Przesuwano soczewkę skupiającą i wyznaczono dwa położenia S₁ (obraz powiększony) i S₂ (obraz pomniejszony), dla których obraz na ekranie jest ostry. Odczytano d = |S₂−S₁|. Pomiar powtórzono 5 razy.
+
+4. Metoda C (soczewka rozpraszająca): bezpośrednio za soczewką skupiającą (f₁, wyznaczoną metodą B) umieszczono soczewkę rozpraszającą (f₂). Cały układ ustawiono tak, aby na ekranie E powstał ostry obraz rzeczywisty przedmiotu P. Odczytano odległości a, b oraz odstęp d między środkami obu soczewek. Następnie obliczono D_(wyp) i wyznaczono D₂, f₂.
+
+5. Wyniki pomiarów i opracowanie
+
+5.1 Tabela I – Metoda A: wzór soczewkowy (soczewka skupiająca)
+
+Uwaga. Pomiar nr 2 (, ) daje , wyraźnie odbiegającą od pozostałych. Dla soczewki 100 mm i  spodziewana odległość obrazu wynosi b ≈ 21 cm, co sugeruje błąd wyostrzenia obrazu lub odczytu skali. Po wyłączeniu pomiaru 2:
+
+co jest spójne z wynikiem metody Bessela (pkt 5.2).
+
+Analiza niepewności (Metoda A):
+
+Niepewność instrumentalna (typ B):
+
+Niepewność statystyczna (typ A) ze wszystkich 4 pomiarów:
+
+Dominuje niepewność statystyczna wynikająca z pomiaru nr 2.
+
+5.2 Tabela II – Metoda B: metoda Bessela (soczewka skupiająca)
+
+Analiza niepewności (Metoda B):
+
+Niepewność statystyczna (typ A):
+
+Niepewność instrumentalna (typ B) wg wzoru z propagacji błędów dla ([eq:bessela]), :
+
+Łączna niepewność rozszerzona (K = 2):
+
+Wynik jest zgodny z nominalną ogniskową soczewki skupiającej f₁^(nom) = 10 cm; odchylenie względne wynosi ok. 6%.
+
+5.3 Tabela III – Metoda C: soczewka rozpraszająca
+
+Do obliczeń przyjęto moc optyczną soczewki skupiającej wyznaczoną metodą B: ; odstęp między soczewkami .
+
+Analiza niepewności (Metoda C):
+
+Niepewność D_(wyp):
+
+Niepewność D₁ z wyniku metody B ():
+
+Łączna niepewność D₂:
+
+Niepewność f₂:
+
+Porównanie z wartością nominalną. Przy przyjęciu nominalnej wartości ():
+
+Wartość ta jest bliska nominalnej ogniskowej soczewki rozpraszającej (odchylenie  ≈ 3%), co wskazuje, że głównym źródłem rozbieżności wyniku Metody C jest odchylenie zmierzonej f₁^((B)) od wartości nominalnej .
+
+6. Wnioski
+
+1. Metoda B (Bessela) dała wynik f₁^((B)) = (9,42±0,10) cm, bliski wartości nominalnej (odchylenie względne ok. 6 %). Metoda ta jest dokładniejsza od metody bezpośredniej (wzoru soczewkowego), ponieważ eliminuje konieczność precyzyjnego ustalenia środka optycznego soczewki, a wyznaczenie dwóch ostrych obrazów przy stałej odległości L redukuje błędy systematyczne.
+
+2. Metoda A (wzór soczewkowy) dała wynik f₁^((A)) = (10,3±2,1) cm. Duża niepewność wynika z anomalnej wartości w pomiarze nr 2 (), wskazującej na błąd wyostrzenia obrazu lub odczytu skali. Po wyłączeniu tego pomiaru średnia wynosi , co jest spójne z wynikiem metody Bessela.
+
+3. Metoda C (soczewka rozpraszająca) przy użyciu zmierzonego dała wynik f₂ =  − (14,75±0,32) cm, znacznie różniący się od wartości nominalnej (odchylenie ok. 26 %). Przy nominalnym wynik wynosi , czyli zaledwie 3 % od wartości tablicowej. Oznacza to, że  6 % odchylenie wyznaczonej f₁^((B)) od wartości nominalnej propaguje się silnie w obliczeniach metodą C.
+
+4. Głównym źródłem niepewności w metodzie C jest niepewność wyznaczenia mocy soczewki skupiającej , która dominuje nad niepewnością wyznaczenia D_(wyp) . Dokładniejsze wyznaczenie f₁ (większa liczba pomiarów lub wzorcowana soczewka) pozwoliłoby znacząco zmniejszyć niepewność końcowego wyniku f₂.
+
+5. Metoda Bessela jest zalecana do wyznaczania ogniskowych soczewek skupiających ze względu na jej odporność na błędy lokalizacji środka optycznego soczewki oraz niskie niepewności statystyczne przy 5 pomiarach (, tj.  ≈ 1 % wartości ogniskowej).
