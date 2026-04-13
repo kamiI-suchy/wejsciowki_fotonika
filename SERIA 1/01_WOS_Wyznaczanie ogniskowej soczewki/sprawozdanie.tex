@@ -1,0 +1,401 @@
+% ============================================================
+%  Sprawozdanie: Wyznaczanie ogniskowej soczewki (WOS)
+%  Fotonika – laboratorium
+% ============================================================
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, top=2.2cm, bottom=2.2cm, left=2.5cm, right=2.5cm}
+
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}, locale=DE}
+\usepackage{parskip}
+\setlength{\parskip}{4pt}
+
+\title{}
+\date{}
+
+\begin{document}
+
+% ============================================================
+%  TABELA NAGŁÓWKOWA -- do samodzielnego uzupełnienia
+% ============================================================
+
+% ============================================================
+%  SCHEMAT UKŁADU POMIAROWEGO -- do samodzielnego uzupełnienia
+% ============================================================
+
+% ============================================================
+\section*{1.\quad Cel ćwiczenia}
+% ============================================================
+
+Celem ćwiczenia jest wyznaczenie ogniskowej soczewki skupiającej dwiema niezależnymi
+metodami (wzorem soczewkowym oraz metodą Bessela) oraz wyznaczenie ogniskowej soczewki
+rozpraszającej przy użyciu zestawu z~soczewką skupiającą o~znanych parametrach.
+
+% ============================================================
+\section*{2.\quad Wstęp teoretyczny}
+% ============================================================
+
+\textbf{Soczewka cienka} to bryła z~przezroczystego materiału ograniczona dwiema
+powierzchniami sferycznymi, której grubość jest pomijalnie mała w~porównaniu
+z~promieniami krzywizn i~ogniskową. Dla soczewki skupiającej $f > 0$, dla
+rozpraszającej $f < 0$.
+
+\textbf{Równanie soczewki cienkiej:}
+\begin{equation}
+  \frac{1}{f} = \frac{1}{a} + \frac{1}{b},
+  \label{eq:soczewka}
+\end{equation}
+gdzie $a$ -- odległość przedmiotu od soczewki, $b$ -- odległość obrazu od soczewki
+($b > 0$ dla obrazu rzeczywistego). Stąd ogniskową wyznacza się jako:
+\begin{equation}
+  f = \frac{ab}{a + b}.
+  \label{eq:f_ab}
+\end{equation}
+
+\textbf{Zdolność skupiająca (moc optyczna)} soczewki:
+\begin{equation}
+  D = \frac{1}{f} \quad \left[\si{m^{-1}} = \text{dioptria}\right].
+\end{equation}
+
+\textbf{Metoda Bessela}: przy stałej odległości $L > 4f$ między przedmiotem a~ekranem
+istnieją \emph{dwa} położenia soczewki skupiającej, przy których na ekranie pojawia się
+ostry obraz -- powiększony ($S_1$) oraz pomniejszony ($S_2$). Odległość między tymi
+dwoma położeniami oznaczamy $d = |S_2 - S_1|$. Ogniskową wyznacza się ze wzoru:
+\begin{equation}
+  f = \frac{L^2 - d^2}{4L}.
+  \label{eq:bessela}
+\end{equation}
+Zaletą tej metody jest brak konieczności precyzyjnego ustalenia środka optycznego
+soczewki, co eliminuje systematyczne błędy wyznaczania $a$ i~$b$.
+
+\textbf{Układ dwóch cienkich soczewek} rozdzielonych odległością~$d$ ma wypadkową moc
+optyczną:
+\begin{equation}
+  D_\text{wyp} = D_1 + D_2 - d \cdot D_1 D_2.
+  \label{eq:uklad}
+\end{equation}
+Stąd moc optyczna nieznanej soczewki:
+\begin{equation}
+  D_2 = \frac{D_\text{wyp} - D_1}{1 - d \cdot D_1}.
+  \label{eq:D2}
+\end{equation}
+
+% ============================================================
+\section*{3.\quad Spis przyrządów pomiarowych}
+% ============================================================
+
+\begin{itemize}
+  \item Ława optyczna ze skalą milimetrową.
+  \item Soczewka skupiająca, nominalna ogniskowa $f_1^{\text{nom}} = \SI{100}{mm}$.
+  \item Soczewka rozpraszająca, nominalna ogniskowa $f_2^{\text{nom}} = \SI{-200}{mm}$.
+  \item Oświetlony przedmiot (przesłona z~wycięciem i~źródło światła).
+  \item Ekran (biały, matowy).
+  \item Przyjęta dokładność odczytu skali ławy: $\Delta a = \Delta b = \Delta d =
+        \Delta L = \SI{1}{mm} = \SI{0{,}1}{cm}$.
+\end{itemize}
+
+% ============================================================
+\section*{4.\quad Przebieg ćwiczenia}
+% ============================================================
+
+\begin{enumerate}
+  \item Na ławie optycznej ustawiono kolejno: oświetlony przedmiot~P, soczewkę~S
+        oraz ekran~E.
+
+  \item \textbf{Metoda A (wzór soczewkowy):} dla każdego z~4~pomiarów przesunięto
+        soczewkę skupiającą do pozycji dającej ostry obraz na ekranie, odczytano
+        odległości $a$ (przedmiot--soczewka) i~$b$ (soczewka--ekran) oraz obliczono
+        $L = a + b$ i~$f = ab/L$.
+
+  \item \textbf{Metoda B (Bessela):} ustawiono przedmiot i~ekran w~stałej odległości
+        $L = \SI{57}{cm} > 4f$. Przesuwano soczewkę skupiającą i~wyznaczono dwa
+        położenia~$S_1$~(obraz powiększony) i~$S_2$~(obraz pomniejszony), dla których
+        obraz na ekranie jest ostry. Odczytano $d = |S_2 - S_1|$.
+        Pomiar powtórzono 5~razy.
+
+  \item \textbf{Metoda C (soczewka rozpraszająca):} bezpośrednio za soczewką skupiającą
+        ($f_1$, wyznaczoną metodą B) umieszczono soczewkę rozpraszającą ($f_2$).
+        Cały układ ustawiono tak, aby na ekranie E powstał ostry obraz rzeczywisty
+        przedmiotu P. Odczytano odległości $a$, $b$ oraz odstęp $d$ między środkami
+        obu soczewek. Następnie obliczono $D_\text{wyp}$ i~wyznaczono $D_2$, $f_2$.
+\end{enumerate}
+
+% ============================================================
+\section*{5.\quad Wyniki pomiarów i~opracowanie}
+% ============================================================
+
+% ─────────────────────────────────────────────────────────────
+\subsection*{5.1\quad Tabela~I – Metoda~A: wzór soczewkowy (soczewka skupiająca)}
+
+\begin{table}[H]
+\centering
+\caption{Wyniki pomiarów metodą~A; ogniskowa obliczona ze wzoru $f = ab/(a+b)$.}
+\label{tab:A}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{c
+    S[table-format=2.1]
+    S[table-format=2.1]
+    S[table-format=2.1]
+    S[table-format=2.2]}
+\toprule
+Lp. & {$a$ (cm)} & {$b$ (cm)} & {$L = a+b$ (cm)} & {$f = ab/L$ (cm)} \\
+\midrule
+1 & 11,4 & 51,0 & 62,4 &  9,32 \\
+2 & 19,0 & 45,0 & 64,0 & 13,36 \\
+3 & 12,0 & 41,0 & 53,0 &  9,28 \\
+4 & 12,0 & 37,0 & 49,0 &  9,06 \\
+\midrule
+Śr. & 13,6 & 43,5 & 57,1 & 10,26 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Uwaga.} Pomiar nr~2 ($a = \SI{19{,}0}{cm}$, $b = \SI{45{,}0}{cm}$)
+daje $f = \SI{13{,}36}{cm}$, wyraźnie odbiegającą od pozostałych. Dla soczewki 100\,mm
+i~$a = \SI{19{,}0}{cm}$ spodziewana odległość obrazu wynosi $b \approx \SI{21}{cm}$,
+co sugeruje błąd wyostrzenia obrazu lub odczytu skali. Po wyłączeniu pomiaru~2:
+\[
+  \bar{f}_{A,3} = \frac{9{,}32 + 9{,}28 + 9{,}06}{3} = \SI{9{,}22}{cm},
+\]
+co jest spójne z~wynikiem metody Bessela (pkt~5.2).
+
+\medskip
+\noindent\textbf{Analiza niepewności (Metoda~A):}
+
+Niepewność instrumentalna (typ~B):
+\[
+  \delta f = 0{,}6\sqrt{\left(\frac{\Delta a}{\bar{a}}\right)^2
+                      + \left(\frac{\Delta b}{\bar{b}}\right)^2
+                      + \left(\frac{\Delta L}{\bar{L}}\right)^2}
+           = 0{,}6\sqrt{(7{,}35{\times}10^{-3})^2
+                      + (2{,}30{\times}10^{-3})^2
+                      + (1{,}75{\times}10^{-3})^2}
+           = 4{,}74{\times}10^{-3},
+\]
+\[
+  \Delta f_B = K\,\bar{f}_A\,\delta f = 2 \times 10{,}26 \times 4{,}74{\times}10^{-3}
+             \approx \SI{0{,}10}{cm} \quad (K=2).
+\]
+
+Niepewność statystyczna (typ~A) ze wszystkich 4~pomiarów:
+\[
+  s = \sqrt{\frac{\sum_{i=1}^{4}(f_i-\bar{f})^2}{n-1}} = \SI{2{,}07}{cm},
+  \qquad
+  u_A = \frac{s}{\sqrt{4}} = \SI{1{,}04}{cm},
+  \qquad
+  \Delta f_A = K\,u_A = \SI{2{,}07}{cm}.
+\]
+Dominuje niepewność statystyczna wynikająca z~pomiaru nr~2.
+
+\[
+  \boxed{f_1^{(A)} = (10{,}3 \pm 2{,}1)\ \si{cm}}
+\]
+
+% ─────────────────────────────────────────────────────────────
+\subsection*{5.2\quad Tabela~II – Metoda~B: metoda Bessela (soczewka skupiająca)}
+
+\begin{table}[H]
+\centering
+\caption{Wyniki pomiarów metodą Bessela; $L = \SI{57}{cm} = \text{const}$.
+         Ogniskowa obliczona ze wzoru~(\ref{eq:bessela}).}
+\label{tab:B}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{c S[table-format=2.1] S[table-format=1.4]}
+\toprule
+Lp. & {$d$ (cm)} & {$f = (L^2-d^2)/(4L)$ (cm)} \\
+\midrule
+1 & 33,0 & 9,4737 \\
+2 & 33,5 & 9,3279 \\
+3 & 32,9 & 9,5026 \\
+4 & 33,0 & 9,4737 \\
+5 & 33,6 & 9,2984 \\
+\midrule
+Śr. & 33,2 & 9,42 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Analiza niepewności (Metoda~B):}
+
+Niepewność statystyczna (typ~A):
+\[
+  s = \SI{0{,}095}{cm},
+  \qquad
+  u_A = \frac{s}{\sqrt{5}} = \SI{0{,}042}{cm},
+  \qquad
+  \Delta f_A = K\,u_A = \SI{0{,}085}{cm}.
+\]
+
+Niepewność instrumentalna (typ~B) wg wzoru z~propagacji błędów dla~(\ref{eq:bessela}),
+$\Delta d = \Delta L = \SI{0{,}1}{cm}$:
+\[
+  \Delta f_B = 0{,}6\,K
+    \sqrt{\left(\frac{d^2+L^2}{4L^2}\,\Delta L\right)^2
+         +\left(\frac{d}{2L}\,\Delta d\right)^2}
+  = 1{,}2\sqrt{(0{,}3348 \cdot 0{,}1)^2 + (0{,}2912 \cdot 0{,}1)^2}
+  \approx \SI{0{,}053}{cm}.
+\]
+
+Łączna niepewność rozszerzona ($K = 2$):
+\[
+  \Delta f = K\sqrt{u_A^2 + \!\left(\frac{\Delta f_B}{K}\right)^{\!2}}
+           = 2\sqrt{(0{,}042)^2 + (0{,}027)^2}
+           \approx \SI{0{,}10}{cm}.
+\]
+
+\[
+  \boxed{f_1^{(B)} = (9{,}42 \pm 0{,}10)\ \si{cm}.}
+\]
+
+Wynik jest zgodny z~nominalną ogniskową soczewki skupiającej $f_1^{\text{nom}} = \SI{10}{cm}$;
+odchylenie względne wynosi ok.~$6\%$.
+
+% ─────────────────────────────────────────────────────────────
+\subsection*{5.3\quad Tabela~III – Metoda~C: soczewka rozpraszająca}
+
+\begin{table}[H]
+\centering
+\caption{Wyniki jednorazowego pomiaru układu soczewka skupiająca + soczewka rozpraszająca.}
+\label{tab:C}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{
+    S[table-format=2.1]
+    S[table-format=2.1]
+    S[table-format=2.1]
+    S[table-format=1.1]
+    S[table-format=1.3]}
+\toprule
+{$a$ (cm)} & {$b$ (cm)} & {$L = a+b$ (cm)} & {$d$ (cm)} & {$D_\text{wyp}$ (dioptr)} \\
+\midrule
+22,2 & 34,9 & 57,1 & 4,9 & 7,370 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Do obliczeń przyjęto moc optyczną soczewki skupiającej wyznaczoną metodą~B:
+$D_1 = 1/f_1^{(B)} = 1/\SI{0{,}0942}{m} = \SI{10{,}62}{dioptr}$;
+odstęp między soczewkami $d = \SI{4{,}9}{cm} = \SI{0{,}049}{m}$.
+
+\begin{align*}
+  D_\text{wyp} &= \frac{1}{a} + \frac{1}{b}
+                = \frac{1}{\SI{0{,}222}{m}} + \frac{1}{\SI{0{,}349}{m}}
+                = 4{,}505 + 2{,}866
+                = \SI{7{,}370}{dioptr}, \\[4pt]
+  D_2 &= \frac{D_\text{wyp} - D_1}{1 - d\cdot D_1}
+       = \frac{7{,}370 - 10{,}62}{1 - 0{,}049 \times 10{,}62}
+       = \frac{-3{,}250}{0{,}4796}
+       = \SI{-6{,}78}{dioptr}, \\[4pt]
+  f_2 &= \frac{1}{D_2}
+       = \frac{1}{-6{,}78}
+       = \SI{-0{,}1475}{m}
+       = \SI{-14{,}75}{cm}.
+\end{align*}
+
+\noindent\textbf{Analiza niepewności (Metoda~C):}
+
+Niepewność $D_\text{wyp}$:
+\begin{align*}
+  \delta D_\text{wyp} &= 0{,}6\sqrt{\left(\frac{\Delta a}{a}\right)^2
+                                   +\left(\frac{\Delta b}{b}\right)^2}
+    = 0{,}6\sqrt{\left(\frac{0{,}1}{22{,}2}\right)^2
+               +\left(\frac{0{,}1}{34{,}9}\right)^2}
+    = 3{,}20{\times}10^{-3}, \\
+  \Delta D_\text{wyp} &= K \cdot D_\text{wyp} \cdot \delta D_\text{wyp}
+    = 2 \times 7{,}370 \times 3{,}20{\times}10^{-3}
+    = \SI{0{,}047}{dioptr}.
+\end{align*}
+
+Niepewność $D_1$ z~wyniku metody~B ($\Delta f_1 = \SI{0{,}10}{cm} = \SI{0{,}001}{m}$):
+\[
+  \Delta D_1 = D_1^2 \cdot \Delta f_1
+             = (10{,}62)^2 \times \SI{0{,}001}{m}
+             = \SI{0{,}113}{dioptr}.
+\]
+
+Łączna niepewność $D_2$:
+\[
+  \Delta D_2 \approx 0{,}6\,K\sqrt{(\Delta D_\text{wyp})^2 + (\Delta D_1)^2}
+             = 1{,}2\sqrt{(0{,}047)^2+(0{,}113)^2}
+             = \SI{0{,}147}{dioptr}.
+\]
+
+Niepewność $f_2$:
+\[
+  \Delta f_2 = \frac{\Delta D_2}{D_2^2}
+             = \frac{0{,}147}{(6{,}78)^2}
+             = \SI{0{,}0032}{m}
+             \approx \SI{0{,}32}{cm}.
+\]
+
+\[
+  \boxed{f_2 = -(14{,}75 \pm 0{,}32)\ \si{cm}.}
+\]
+
+\medskip
+\noindent\textbf{Porównanie z~wartością nominalną.} Przy przyjęciu nominalnej wartości
+$D_1^{\text{nom}} = \SI{10{,}00}{dioptr}$ ($f_1^{\text{nom}} = \SI{10{,}0}{cm}$):
+\[
+  D_2^{\text{nom}} = \frac{7{,}370 - 10{,}00}{1 - 0{,}049 \times 10{,}00}
+                   = \frac{-2{,}630}{0{,}510}
+                   = \SI{-5{,}16}{dioptr},
+  \qquad
+  f_2^{\text{nom}} = \SI{-19{,}4}{cm}.
+\]
+Wartość ta jest bliska nominalnej ogniskowej soczewki rozpraszającej
+$f_2^{\text{nom}} = \SI{-20{,}0}{cm}$ (odchylenie $\approx 3\%$), co wskazuje,
+że głównym źródłem rozbieżności wyniku Metody~C jest odchylenie zmierzonej $f_1^{(B)}$
+od wartości nominalnej $f_1^{\text{nom}} = \SI{10{,}0}{cm}$.
+
+% ============================================================
+\section*{6.\quad Wnioski}
+% ============================================================
+
+\begin{enumerate}
+  \item \textbf{Metoda~B (Bessela)} dała wynik $f_1^{(B)} = (9{,}42 \pm 0{,}10)\,\si{cm}$,
+        bliski wartości nominalnej $f_1^{\text{nom}} = \SI{10{,}0}{cm}$
+        (odchylenie względne ok.~$6\,\%$). Metoda ta jest dokładniejsza od metody
+        bezpośredniej (wzoru soczewkowego), ponieważ eliminuje konieczność precyzyjnego
+        ustalenia środka optycznego soczewki, a~wyznaczenie dwóch ostrych obrazów przy
+        stałej odległości $L$ redukuje błędy systematyczne.
+
+  \item \textbf{Metoda~A (wzór soczewkowy)} dała wynik $f_1^{(A)} = (10{,}3 \pm 2{,}1)\,\si{cm}$.
+        Duża niepewność wynika z~anomalnej wartości w~pomiarze nr~2
+        ($f = \SI{13{,}36}{cm}$), wskazującej na błąd wyostrzenia obrazu lub odczytu
+        skali. Po wyłączeniu tego pomiaru średnia wynosi $\bar{f}_{A,3} = \SI{9{,}22}{cm}$,
+        co jest spójne z~wynikiem metody Bessela.
+
+  \item \textbf{Metoda~C (soczewka rozpraszająca)} przy użyciu zmierzonego
+        $D_1 = \SI{10{,}62}{dioptr}$ dała wynik $f_2 = -(14{,}75 \pm 0{,}32)\,\si{cm}$,
+        znacznie różniący się od wartości nominalnej $\SI{-20{,}0}{cm}$
+        (odchylenie ok.~$26\,\%$). Przy nominalnym $D_1 = \SI{10{,}00}{dioptr}$
+        wynik wynosi $f_2 \approx \SI{-19{,}4}{cm}$, czyli zaledwie $3\,\%$ od wartości
+        tablicowej. Oznacza to, że ~$6\,\%$ odchylenie wyznaczonej $f_1^{(B)}$ od
+        wartości nominalnej propaguje się silnie w~obliczeniach metodą~C.
+
+  \item Głównym źródłem niepewności w~metodzie~C jest niepewność wyznaczenia mocy
+        soczewki skupiającej~$\Delta D_1 = \SI{0{,}11}{dioptr}$, która dominuje nad
+        niepewnością wyznaczenia~$D_\text{wyp}$ $(\Delta D_\text{wyp} = \SI{0{,}047}{dioptr})$.
+        Dokładniejsze wyznaczenie~$f_1$ (większa liczba pomiarów lub wzorcowana soczewka)
+        pozwoliłoby znacząco zmniejszyć niepewność końcowego wyniku~$f_2$.
+
+  \item Metoda Bessela jest zalecana do wyznaczania ogniskowych soczewek skupiających
+        ze względu na jej odporność na błędy lokalizacji środka optycznego soczewki
+        oraz niskie niepewności statystyczne przy 5~pomiarach ($\Delta f \approx \SI{0{,}10}{cm}$,
+        tj.~$\approx 1\,\%$ wartości ogniskowej).
+\end{enumerate}
+
+\end{document}
