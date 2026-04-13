@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.13)  13 APR 2026 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.13)  13 APR 2026 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -548,12 +548,6 @@ Overfull \hbox (19.0877pt too wide) in paragraph at lines 119--123
 -czy-tano od-le-gªo-±ci $\OML/cmm/m/it/12 a$ \T1/cmr/m/n/12 (przedmiot--
  []
 
-
-Overfull \hbox (98.06094pt too wide) detected at line 188
-\OML/cmm/m/it/12 ^^Nf \OT1/cmr/m/n/12 = 0[]6[] = 0[]6[] = 4[]74[]10[]\OML/cmm/m
-/it/12 ;
- []
-
 [2]
 Overfull \hbox (37.79971pt too wide) detected at line 251
 \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 f[] \OT1/cmr/m/n/12 = 0[]6 \OML/cmm/m/it/12
@@ -578,11 +572,11 @@ Package rerunfilecheck Info: File `sprawozdanie.out' has not changed.
 Here is how much of TeX's memory you used:
  17170 strings out of 476074
  328128 string characters out of 5793137
- 1942975 words of memory out of 5000000
+ 1941975 words of memory out of 5000000
  38967 multiletter control sequences out of 15000+600000
  569893 words of font info for 64 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
- 75i,12n,79p,530b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,530b,987s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.60
 0pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.
 600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm080
@@ -597,7 +591,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on sprawozdanie.pdf (5 pages, 146291 bytes).
+Output written on sprawozdanie.pdf (5 pages, 146155 bytes).
 PDF statistics:
  315 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams
