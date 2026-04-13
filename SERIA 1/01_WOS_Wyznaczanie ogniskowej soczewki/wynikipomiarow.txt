@@ -1,0 +1,14 @@
+Tabela 1 (dla soczewki 100 mm):
+Pomiar 1: a = 11,4 cm b = 51 cm L = 62,4 cm
+Pomiar 2: a = 19 cm b = 45 cm L = 64 cm
+Pomiar 3: a = 12 cm b = 41 cm L = 53 cm
+Pomiar 4: a = 12 cm b = 37 cm L = 49 cm
+
+Tabela 2 (dla soczewki 100mm):
+L = 57 cm
+d1 = 33 cm, d2 = 33,5 cm, d3 = 32,9 cm, d4 = 33 cm, d5 = 33,6 cm (każde d to jeden pomiar)
+
+Tabela 3 (dla pierwszej soczewki wypukłej 100 mm skupiającej oraz drugiej soczewki -200 mm rozpraszającej):
+a = 22,2 cm
+b = 34,9 cm
+d = 4,9 cm
