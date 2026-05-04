@@ -10,6 +10,9 @@ Zachodniopomorski Uniwersystet Technologiczny
 <!-- Przedmiot / Prowadzący rows -->
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; border:1.5px solid #333;">
   <tr>
+    <td>Zachodniopomorski Uniwersytet Technologiczny</td>
+  </tr>
+  <tr>
     <td style="font-weight:bold; background:#f0f0f0; width:18%; white-space:nowrap;">Przedmiot:</td>
     <td style="background:#fff; width:82%;">Fotonika</td>
   </tr>
