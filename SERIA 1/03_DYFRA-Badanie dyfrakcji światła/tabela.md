@@ -30,7 +30,7 @@
 
   <!-- Row: Nr ćw., 01, Temat, WOS -->
   <tr>
-    <td colspan="2" style="font-weight:bold; background:#f0f0f0; text-align:center; white-space:nowrap;">Nr ćw.:&nbsp;5</td>
+    <td colspan="2" style="font-weight:bold; background:#f0f0f0; text-align:center; white-space:nowrap;">Nr ćw.:&nbsp;6</td>
     <td style="text-align:center; white-space:nowrap; background:#fff;">01</td>
     <td colspan="2" style="font-weight:bold; background:#f0f0f0; text-align:left; white-space:nowrap;">Temat:</td>
     <td colspan="7" style="text-align:left; background:#fff; white-space:normal; word-wrap:break-word;">DYFRAKCJA (DYFR)</td>
