@@ -49,14 +49,14 @@
     <td style="font-weight:bold; background:#f0f0f0; white-space:nowrap;">Rok:</td>
     <td style="text-align:center; background:#fff; white-space:nowrap;">2025/2026</td>
     <td style="font-weight:bold; background:#f0f0f0; white-space:nowrap;">Data:</td>
-    <td style="text-align:center; background:#fff; white-space:nowrap;">23.03.2026</td>
+    <td style="text-align:center; background:#fff; white-space:nowrap;">13.04.2026</td>
   </tr>
 
   <!-- Row: Skład zespołu -->
   <tr>
     <td colspan="3" style="font-weight:bold; background:#f0f0f0; text-align:left; white-space:nowrap;">Skład zespołu wg. obecności podczas ćwiczenia:</td>
     <td colspan="9" style="text-align:left; background:#fff; white-space:normal; word-wrap:break-word; line-height:1.4;">
-      1. Piotr Gadomski &nbsp;&nbsp; 2. Kamil Suchy
+      1. Kamil Suchy &nbsp;&nbsp;
     </td>
   </tr>
 
