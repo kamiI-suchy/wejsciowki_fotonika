@@ -1,55 +1,49 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprawozdanie – Wyznaczanie Ogniskowej Soczewki</title>
-    <style>
-        :root {
-            --border-color: #2c2c2c;
-            --bg-light: #f4f4f4;
-            --text-dark: #1a1a1a;
-            --font-stack: 'Segoe UI', 'Calibri', 'Arial', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: #e3e3e3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: var(--font-stack);
-            padding: 24px;
-        }
-
-        .report-container {
-            max-width: 950px;
-            width: 100%;
-            background: white;
-            border: 2px solid #3a3a3a;
-            box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-
-        /* ── University banner ── */
-        .uni-banner {
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 0.6px;
-            padding: 14px 16px;
-            background: #fff;
-            border-bottom: 2px solid #3a3a3a;
-            text-transform: uppercase;
-            color: #1f1f1f;
-        }
+<div class="uni-banner">Zachodniopomorski Uniwersystet Technologiczny</div>
+    <table class="info-table">
+        <tr>
+            <td class="info-label">Przedmiot:</td>
+            <td class="info-value">Fotonika</td>
+        </tr>
+        <tr>
+            <td class="info-label">Prowadzący:</td>
+            <td class="info-value">Mgr. Inż. Eliza Miśkiewicz</td>
+        </tr>
+    </table>
+    <div class="title-banner">Sprawozdanie z wykonanego ćwiczenia</div>
+    <table class="main-table">
+        <tr>
+            <td class="lbl merged-nrcw" colspan="2">Nr ćw.:&nbsp;3</td>
+            <td class="val" colspan="1">01</td>
+            <td class="lbl" colspan="2">Temat:</td>
+            <td class="val merged-desc" colspan="7">Wyznaczanie Ogniskowej Soczewki (WOS)</td>
+        </tr>
+        <tr>
+            <td class="lbl">Zespół lab.:</td>
+            <td class="val">5</td>
+            <td class="lbl">Grupa:</td>
+            <td class="val">L1</td>
+            <td class="lbl">Studia:</td>
+            <td class="val">S2</td>
+            <td class="lbl">Kierunek:</td>
+            <td class="val">TI</td>
+            <td class="lbl">Rok:</td>
+            <td class="val">2025/2026</td>
+            <td class="lbl">Data:</td>
+            <td class="val">23.03.2026</td>
+        </tr>
+        <tr>
+            <td class="lbl" colspan="3" style="text-align: left;">Skład zespołu wg. obecności podczas ćwiczenia:</td>
+            <td class="val team-list" colspan="9">
+                1. Piotr Gadomski &nbsp;&nbsp; 2. Kamil Suchy
+            </td>
+        </tr>
+    </table>
+    <table class="grade-table">
+        <tr>
+            <td class="grade-label">Ocena:</td>
+            <td class="grade-value"></td>
+        </tr>
+    </table>        }
 
         /* ── Subject / Instructor table (2 columns, separate rows) ── */
         .info-table {
