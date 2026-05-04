@@ -2,11 +2,8 @@
 
 <table>
   <tr>
-    <td>Wiersz 1</td>
-    <td>Tekst z<br>łamaniem linii
-    $$\lambda
-    $$
-    </td>
+    <td>x<br>[mm]</td>
+    <td>$$\delta$$x</td>
   </tr>
 </table>
 
