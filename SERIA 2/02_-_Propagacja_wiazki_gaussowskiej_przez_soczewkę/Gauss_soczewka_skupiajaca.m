@@ -36,7 +36,6 @@ w1 = w10*sqrt(1+(z).^2/z10^2);
 zz = d1:0.1:2*d1;
 w2 = w20*sqrt(1+(zz-d1-d2).^2/z20^2); 
 h2 = d2 - f;
-wwy = (f^2*w10^2/(f-d1)+z10^2);
 %-------------------------------------------------------------------
 %WYKRES przestrzenny wiązki
 %-------------------------------------------------------------------
@@ -54,9 +53,11 @@ ylim([-1 1]); xlabel('[mm]'); ylabel('[\mum]');
 alfa=0:0.01:2*pi;
 x1=w10*sin(alfa); y1=w10*cos(alfa);
 x2=w20*sin(alfa); y2=w20*cos(alfa);
-fprintf("d2 = %s\n", d2);
-fprintf("h2 = %s\n", h2);
-fprintf("wwy = %s\n", wwy);
+fprintf("w_wy (w20) = %f\n", w20);
+fprintf("d2 = %f\n", d2);
+fprintf("h2 = %f\n", h2);
+fprintf("theta_wy (w radianach) = %f\n", theta2);
+fprintf("theta_wy (w stopniach) = %f\n", theta_stopnie);
 %figure(2);
 %plot(x1,y1,'k',x2,y2,'k','linewidth',2);
 %axis('equal');
