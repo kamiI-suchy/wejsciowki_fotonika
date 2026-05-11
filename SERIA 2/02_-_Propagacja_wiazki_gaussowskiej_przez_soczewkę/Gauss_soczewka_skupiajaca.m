@@ -1,27 +1,27 @@
-% Na podstawie znajomoœci parametrów wi¹zki gaussowskiej wejœciowej
-% program oblicza parametry wi¹zki gaussowskiej po przejœciu przez         
-% soczewkê skupiaj¹c¹ o znanej ogniskowej. Korzysta siê z równania           
+% Na podstawie znajomoÅ›ci parametrÃ³w wiÄ…zki gaussowskiej wejÅ›ciowej
+% program oblicza parametry wiÄ…zki gaussowskiej po przejÅ›ciu przez         
+% soczewkÄ™ skupiajÄ…cÄ… o znanej ogniskowej. Korzysta siÄ™ z rÃ³wnania           
 % soczewki cienkiej. 
 %*******************************************************************
 clc; clear all; close all;
 i = sqrt(-1);
 %-------------------------------------------------------------------
-%PARAMETRY WI¥ZKI WEJŒCIOWEJ (d³ugoœci w mm)
+%PARAMETRY WIÄ„ZKI WEJÅšCIOWEJ (dÅ‚ugoÅ›ci w mm)
 %-------------------------------------------------------------------
-lambda = 0.633*10^-3; 	%d³ugoœæ fali lasera He-Ne
-w10 = 0.25; 	%promieñ przewê¿enia wi¹zki
-z10 = (pi/lambda)*w10^2;  	%zasiêg Rayleigha
-theta1 = lambda/(pi*w10); 		%k¹t po³ówkowy rozbie¿noœci wi¹zki
-d1 = 400; 	%odleg³oœæ od przewê¿enia do soczewki
+lambda = 0.633*10^-3; 	%dÅ‚ugoÅ›Ä‡ fali lasera He-Ne
+w10 = 0.25; 	%promieÅ„ przewÄ™Å¼enia wiÄ…zki
+z10 = (pi/lambda)*w10^2;  	%zasiÄ™g Rayleigha
+theta1 = lambda/(pi*w10); 		%kÄ…t poÅ‚Ã³wkowy rozbieÅ¼noÅ›ci wiÄ…zki
+d1 = 400; 	%odlegÅ‚oÅ›Ä‡ od przewÄ™Å¼enia do soczewki
 q1 = d1 - i*z10; 	%parametr Kogelnika
 %-------------------------------------------------------------------
 %SOCZEWKA
 %-------------------------------------------------------------------
-f = 75; 	%ogniskowa soczewki skupiaj¹cej
+f = 75; 	%ogniskowa soczewki skupiajÄ…cej
 S = [1,0; -1/f,1]; 	%macierz dla soczewki   
 A = S(1,1);  B = S(1,2); C = S(2,1); D = S(2,2);
 %-------------------------------------------------------------------
-% RÓWNANIA SOCZEWKI CIENKIEJ DLA WI¥ZKI GAUSSOWSKIEJ
+% RÃ“WNANIA SOCZEWKI CIENKIEJ DLA WIÄ„ZKI GAUSSOWSKIEJ
 %-------------------------------------------------------------------
 w20 = sqrt((f^2*w10^2)/((f-d1)^2+z10^2));
 z20 = (pi/lambda)*w20^2;
@@ -29,14 +29,16 @@ d2 = f+f^2*(d1-f)/((f-d1)^2+z10^2);
 theta2=lambda/(pi*w20); %lub theta2=sqrt(lambda/(pi*z20));
 theta_stopnie=theta2*57.325;
 %-------------------------------------------------------------------
-%RÓWNANIE WI¥ZKI GAUSSOWSKIEJ
+%RÃ“WNANIE WIÄ„ZKI GAUSSOWSKIEJ
 %-------------------------------------------------------------------
 z = 0:0.1:d1;
 w1 = w10*sqrt(1+(z).^2/z10^2);
 zz = d1:0.1:2*d1;
 w2 = w20*sqrt(1+(zz-d1-d2).^2/z20^2); 
+h2 = d2 - f;
+wwy = (f^2*w10^2/(f-d1)+z10^2);
 %-------------------------------------------------------------------
-%WYKRES przestrzenny wi¹zki
+%WYKRES przestrzenny wiÄ…zki
 %-------------------------------------------------------------------
 figure(1);
 plot(z,w1,'k',z,-w1,'k','linewidth',2); hold on;
@@ -47,11 +49,14 @@ plot(0*line+d1,line,'linewidth',3);
 plot(0*line+d1+f,line,'k:','linewidth',2); hold off;
 ylim([-1 1]); xlabel('[mm]'); ylabel('[\mum]');
 %------------------------------------------------------------------
-%Przekrój wi¹zki w przewê¿eniu przed i za soczewk¹
+%PrzekrÃ³j wiÄ…zki w przewÄ™Å¼eniu przed i za soczewkÄ…
 %-------------------------------------------------------------------
 alfa=0:0.01:2*pi;
 x1=w10*sin(alfa); y1=w10*cos(alfa);
 x2=w20*sin(alfa); y2=w20*cos(alfa);
+fprintf("d2 = %s\n", d2);
+fprintf("h2 = %s\n", h2);
+fprintf("wwy = %s\n", wwy);
 %figure(2);
 %plot(x1,y1,'k',x2,y2,'k','linewidth',2);
 %axis('equal');
