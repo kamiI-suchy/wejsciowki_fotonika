@@ -1,12 +1,12 @@
 % ============================================================
-%  Sprawozdanie: Badanie dyfrakcji światła (DYFRA)
+%  Sprawozdanie: Pomiar stężenia substancji w roztworze (LAMB)
 %  Fotonika – laboratorium, ZUT Szczecin
 % ============================================================
 \documentclass[a4paper,12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern} % <-- DODANO: Wektorowa, gładka czcionka z ładnymi polskimi znakami
+\usepackage{lmodern}
 \usepackage[polish]{babel}
 \usepackage{geometry}
 \geometry{a4paper, top=2.2cm, bottom=2.2cm, left=2.5cm, right=2.5cm}
@@ -37,7 +37,7 @@
 \centering
 \small
 \renewcommand{\arraystretch}{1.3}
-\resizebox{\textwidth}{!}{% <-- Skalowanie tabeli
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{|*{12}{c|}}
 \hline
 \multicolumn{12}{|c|}{\textbf{Zachodniopomorski Uniwersytet Technologiczny w Szczecinie}} \\
@@ -52,10 +52,178 @@
 \hline
 Zespół lab.: & 5 & Grupa: & L1 & Studia: & S2 & Kierunek: & TI & Rok: & 2025/2026 & Data: & 20.04.2026 \\
 \hline
-\multicolumn{3}{|c|}{Skład zespołu wg. obecności podczas ćwiczenia:} & \multicolumn{9}{c|}{1. Kamil Suchy}{2. Piotr Gadomski} \\
+\multicolumn{3}{|c|}{Skład zespołu wg. obecności podczas ćwiczenia:} & \multicolumn{9}{c|}{1. Kamil Suchy \hspace{1em} 2. Piotr Gadomski} \\
 \hline
 \multicolumn{2}{|c|}{Ocena:} & \multicolumn{10}{c|}{} \\
 \hline
 \end{tabular}%
 }
 \end{table}
+
+% ============================================================
+\section*{Cel ćwiczenia}
+% ============================================================
+
+Celem ćwiczenia było zbadanie zależności mocy światła przechodzącego przez roztwór
+od stężenia substancji rozpraszającej (mleka w wodzie) oraz sprawdzenie,
+czy badany układ spełnia prawo Lamberta--Beera w postaci wykładniczej.
+Dodatkowo wyznaczono współczynnik tłumienia optycznego $b$ na podstawie liniaryzacji
+zależności $\ln(P/P_0)$ od stężenia.
+
+% ============================================================
+\section*{Wstęp teoretyczny}
+% ============================================================
+
+Prawo Lamberta--Beera opisuje osłabienie mocy wiązki świetlnej w ośrodku:
+\[
+P(C) = P_0\,e^{-C\,b\,d},
+\]
+gdzie: $P_0$ -- moc referencyjna, $P(C)$ -- moc po przejściu przez roztwór,
+$C$ -- stężenie, $b$ -- współczynnik tłumienia, $d$ -- droga optyczna w próbce.
+
+Po wprowadzeniu transmitancji $p = P/P_0$ otrzymujemy:
+\[
+p(C)=e^{-C\,b\,d},
+\qquad
+\ln p(C)= -C\,b\,d.
+\]
+
+Oznacza to, że wykres $\ln p$ w funkcji $C$ powinien być linią prostą.
+Jej współczynnik kierunkowy $k$ spełnia:
+\[
+k=-b\,d.
+\]
+
+% ============================================================
+\section*{Schemat układu pomiarowego}
+% ============================================================
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.92\textwidth}{\centering
+Laser DPSS ($\lambda=532$ nm) $\rightarrow$ polaryzator P1 $\rightarrow$
+polaryzator P2 $\rightarrow$ kuweta z roztworem $\rightarrow$ detektor mocy optycznej}}
+\caption{Schemat stanowiska pomiarowego.}
+\end{figure}
+
+% ============================================================
+\section*{Spis przyrządów pomiarowych}
+% ============================================================
+
+\begin{itemize}
+  \item Laser DPSS (zielony), długość fali około \SI{532}{nm}.
+  \item Dwa polaryzatory liniowe (regulacja mocy wiązki).
+  \item Kuweta pomiarowa (droga optyczna przyjęta do obliczeń: $d=\SI{1,0}{cm}$).
+  \item Miernik mocy optycznej (zakres do około \SI{15}{mW}).
+  \item Strzykawka i naczynie do przygotowania roztworu.
+  \item Woda i mleko jako substancja rozpraszająca.
+\end{itemize}
+
+% ============================================================
+\section*{Przebieg ćwiczenia}
+% ============================================================
+
+\begin{enumerate}
+  \item Przygotowano układ optyczny i ustawiono moc referencyjną dla czystej wody.
+  \item Do kuwety wlano \SI{3}{ml} wody.
+  \item Wyznaczono średnią objętość kropli mleka: $V_k \approx \SI{0,06}{ml}$.
+  \item Wykonano dwa niezależne cykle pomiarowe dla $n=0\dots6$ kropli mleka.
+  \item Dla każdego $n$ obliczono stężenie objętościowe:
+  \[
+  C_n = \frac{n\,V_k}{V}=\frac{n\cdot0{,}06}{3}=0{,}02n.
+  \]
+  \item Obliczono transmitancję $p_n=P_n/P_0$ dla obu serii oraz średnią
+  $\overline{p_n}$.
+  \item Wykonano dopasowanie wykładnicze $\overline{p}(C)$ i liniowe dopasowanie
+  $\ln\overline{p}(C)$.
+\end{enumerate}
+
+% ============================================================
+\section*{Wyniki pomiarów}
+% ============================================================
+
+Dane wejściowe:
+\[
+P_0^{(1)}=\SI{13,7}{mW},\qquad P_0^{(2)}=\SI{13,8}{mW},\qquad V=\SI{3}{ml},\qquad V_k=\SI{0,06}{ml}.
+\]
+
+\begin{table}[H]
+\centering
+\caption{Wyniki pomiarów i obliczone transmitancje.}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c S[table-format=1.2] S[table-format=2.2] S[table-format=1.4] S[table-format=2.2] S[table-format=1.4] S[table-format=1.4]}
+\toprule
+{$n$} & {$C_n$} & {$P_n^{(1)}$ [mW]} & {$p_n^{(1)}$} & {$P_n^{(2)}$ [mW]} & {$p_n^{(2)}$} & {$\overline{p_n}$} \\
+\midrule
+0 & 0,00 & 13,70 & 1,0000 & 13,80 & 1,0000 & 1,0000 \\
+1 & 0,02 & 8,00  & 0,5839 & 8,67  & 0,6283 & 0,6061 \\
+2 & 0,04 & 5,25  & 0,3832 & 4,48  & 0,3246 & 0,3539 \\
+3 & 0,06 & 3,30  & 0,2409 & 2,67  & 0,1935 & 0,2172 \\
+4 & 0,08 & 1,87  & 0,1365 & 1,62  & 0,1174 & 0,1269 \\
+5 & 0,10 & 1,20  & 0,0876 & 1,31  & 0,0949 & 0,0913 \\
+6 & 0,12 & 0,97  & 0,0708 & 1,00  & 0,0725 & 0,0716 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{Obliczenia}
+
+Dopasowanie funkcji postaci:
+\[
+p(C)=A\,e^{-\beta C}
+\]
+daje parametry:
+\[
+A=0{,}8475, \qquad \beta=21{,}83.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{wykres_transmitancja.png}
+\caption{Transmitancja $\overline{p}$ w funkcji stężenia $C$ wraz z dopasowaniem wykładniczym.}
+\end{figure}
+
+\section*{Liniaryzacja zależności}
+
+Po logarytmowaniu:
+\[
+\ln\overline{p} = k\,C + b_0.
+\]
+Dla regresji liniowej otrzymano:
+\[
+k = (-21{,}83 \pm 1{,}47), \qquad b_0 = -0{,}165, \qquad R^2 = 0{,}982.
+\]
+
+Przy założonej drodze optycznej kuwety $d=\SI{1,0}{cm}$:
+\[
+b = \frac{|k|}{d} = (21{,}83 \pm 1{,}47)\,\si{cm^{-1}}.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{wykres_logarytm.png}
+\caption{Zależność $\ln(\overline{p})$ od stężenia $C$ z dopasowaniem liniowym.}
+\end{figure}
+
+% ============================================================
+\section*{Wnioski}
+% ============================================================
+
+\begin{enumerate}
+  \item Wraz ze wzrostem stężenia mleka w wodzie transmitancja wiązki maleje
+  wykładniczo, zgodnie z modelem Lamberta--Beera dla tłumienia optycznego.
+
+  \item Liniaryzacja zależności $\ln(\overline{p})$ od $C$ dała wysoką zgodność z prostą
+  ($R^2=0{,}982$), co potwierdza poprawność przyjętego modelu w badanym zakresie stężeń.
+
+  \item Wyznaczony współczynnik tłumienia wynosi
+  \[
+  b=(21{,}83\pm1{,}47)\,\si{cm^{-1}}
+  \]
+  dla przyjętej drogi optycznej $d=\SI{1,0}{cm}$.
+
+  \item Główny mechanizm osłabienia sygnału w badanym układzie to rozpraszanie
+  światła na cząstkach mleka (układ koloidalny), a nie czysta absorpcja molekularna.
+\end{enumerate}
+
+\end{document}
