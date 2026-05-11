@@ -1,1 +1,61 @@
+% ============================================================
+%  Sprawozdanie: Badanie dyfrakcji światła (DYFRA)
+%  Fotonika – laboratorium, ZUT Szczecin
+% ============================================================
+\documentclass[a4paper,12pt]{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % <-- DODANO: Wektorowa, gładka czcionka z ładnymi polskimi znakami
+\usepackage[polish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, top=2.2cm, bottom=2.2cm, left=2.5cm, right=2.5cm}
+
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}, locale=DE}
+\usepackage{parskip}
+\setlength{\parskip}{4pt}
+
+\title{}
+\date{}
+
+\begin{document}
+
+% ============================================================
+%  TABELA NAGŁÓWKOWA (punkty 1–3)
+% ============================================================
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\resizebox{\textwidth}{!}{% <-- Skalowanie tabeli
+\begin{tabular}{|*{12}{c|}}
+\hline
+\multicolumn{12}{|c|}{\textbf{Zachodniopomorski Uniwersytet Technologiczny w Szczecinie}} \\
+\hline
+\multicolumn{2}{|c|}{Przedmiot:} & \multicolumn{10}{c|}{Fotonika} \\
+\hline
+\multicolumn{2}{|c|}{Prowadzący:} & \multicolumn{10}{c|}{Mgr. Inż. Eliza Miśkiewicz} \\
+\hline
+\multicolumn{12}{|c|}{\textbf{SPRAWOZDANIE Z WYKONANEGO ĆWICZENIA}} \\
+\hline
+\multicolumn{2}{|c|}{Nr ćw.: 7} & 04 & \multicolumn{2}{c|}{Temat:} & \multicolumn{7}{c|}{Pomiar stężenia substancji w roztworze (LAMB)} \\
+\hline
+Zespół lab.: & 5 & Grupa: & L1 & Studia: & S2 & Kierunek: & TI & Rok: & 2025/2026 & Data: & 20.04.2026 \\
+\hline
+\multicolumn{3}{|c|}{Skład zespołu wg. obecności podczas ćwiczenia:} & \multicolumn{9}{c|}{1. Kamil Suchy}{2. Piotr Gadomski} \\
+\hline
+\multicolumn{2}{|c|}{Ocena:} & \multicolumn{10}{c|}{} \\
+\hline
+\end{tabular}%
+}
+\end{table}
