@@ -1,5 +1,21 @@
 # Wejściówka 02 – Propagacja wiązki gaussowskiej przez soczewkę
 
+## Co zrobić (zgodnie z instrukcją: punkty 2, 4 i 5)
+
+1. **Punkt 2 – Wymagania (pytania z początku):**
+   - znać rodzaje soczewek,
+   - znać równanie soczewki (wzór i opis słowny).
+2. **Punkt 4 – Przebieg ćwiczenia:**
+   - uruchomić skrypt `Gauss_soczewka_skupiajaca.m`,
+   - wykonać serie zmian parametrów (`w10`, `f`, `d1`),
+   - dla każdej serii wyznaczyć: $w_{wy}$, $d_2$, $h_2$ oraz $\theta_{wy}$,
+   - przygotować wykresy i wnioski.
+3. **Punkt 5 – Pytania podsumowujące:**
+   - opisać wpływ zmiany parametrów wiązki i położenia względem soczewki na wiązkę wyjściową,
+   - opisać sposób obliczania parametrów wiązki po przejściu przez układ optyczny.
+
+---
+
 ## Pytanie 1: Jakie są rodzaje soczewek?
 
 Soczewki można klasyfikować na kilka sposobów.
