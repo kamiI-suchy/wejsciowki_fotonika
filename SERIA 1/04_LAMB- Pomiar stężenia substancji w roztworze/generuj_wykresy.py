@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import math
+from pathlib import Path
 import matplotlib.pyplot as plt
+
+out_dir = Path(__file__).resolve().parent
 
 n = [0, 1, 2, 3, 4, 5, 6]
 C = [0.02 * i for i in n]
@@ -33,7 +36,7 @@ plt.title('Transmitancja w funkcji stężenia')
 plt.grid(True, alpha=0.25)
 plt.legend()
 plt.tight_layout()
-plt.savefig('wykres_transmitancja.png', dpi=220)
+plt.savefig(out_dir / 'wykres_transmitancja.png', dpi=220)
 plt.close()
 
 # Wykres 2: liniaryzacja
@@ -46,7 +49,7 @@ plt.title('Liniaryzacja prawa Lamberta-Beera')
 plt.grid(True, alpha=0.25)
 plt.legend()
 plt.tight_layout()
-plt.savefig('wykres_logarytm.png', dpi=220)
+plt.savefig(out_dir / 'wykres_logarytm.png', dpi=220)
 plt.close()
 
 print('Wygenerowano: wykres_transmitancja.png, wykres_logarytm.png')
