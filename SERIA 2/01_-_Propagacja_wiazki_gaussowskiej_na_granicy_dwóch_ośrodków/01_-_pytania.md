@@ -202,7 +202,7 @@ Parametry w kodzie:
 | Zmienna | Znaczenie | Wartość domyślna |
 |---------|-----------|-----------------|
 | `lambda` | Długość fali | 1.0 |
-| `n` | Współczynnik załamania ośrodka 2 (ośrodek 1 ma $n_1 = 1$) | 5 |
+| `n` | Współczynnik załamania ośrodka 2 (ośrodek 1 ma $n_1 = 1$) | 3.5 |
 | `Rs` | Promień krzywizny powierzchni granicznej | 4 |
 | `R1` | Promień krzywizny frontu falowego przed granicą (ujemny = fala zbieżna) | −4 |
 
@@ -221,7 +221,7 @@ $$R_2 = \frac{n \cdot R_1}{1 + D \cdot R_1}, \qquad D = \frac{n-1}{R_S}$$
 
 ### Krok 2 – seria symulacji ze zmienną $\lambda$ (pozostałe parametry stałe)
 
-Ustaw `n = 5`, `R1 = -4`, `Rs = 4` i zmieniaj tylko `lambda`:
+Ustaw `n = 3.5`, `R1 = -4`, `Rs = 4` i zmieniaj tylko `lambda`:
 
 | `lambda` |
 |----------|
@@ -249,7 +249,7 @@ Ustaw `lambda = 1.0`, `R1 = -4`, `Rs = 4` i zmieniaj tylko `n`:
 |-----|
 | 1.00 |
 | 3.00 |
-| **3.50** (domyślna wg instrukcji) |
+| **3.50** (domyślna) |
 | 4.25 |
 | 5.50 |
 
@@ -265,7 +265,7 @@ krótszej długości fali w gęstszym ośrodku.
 
 ### Krok 4 – seria symulacji ze zmiennym $R_1$ (pozostałe parametry stałe)
 
-Ustaw `lambda = 1.0`, `n = 5`, `Rs = 4` i zmieniaj tylko `R1`:
+Ustaw `lambda = 1.0`, `n = 3.5`, `Rs = 4` i zmieniaj tylko `R1`:
 
 | `R1` |
 |------|
@@ -288,7 +288,7 @@ skrajne wartości.
 
 ### Krok 5 – seria symulacji ze zmiennym $R_S$ (pozostałe parametry stałe)
 
-Ustaw `lambda = 1.0`, `n = 5`, `R1 = -4` i zmieniaj tylko `Rs`:
+Ustaw `lambda = 1.0`, `n = 3.5`, `R1 = -4` i zmieniaj tylko `Rs`:
 
 | `Rs` |
 |------|
