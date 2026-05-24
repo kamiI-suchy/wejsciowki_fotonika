@@ -1,24 +1,3 @@
-<table>
-    <tr>
-        <td>$\alpha$</td>
-        <td>$\alpha_{śr} \text{ [} ^\circ \text{]}$</td>
-        <td>$u_A(\alpha)$</td>
-        <td>$\Delta\alpha\text{ [rad]}$</td>
-        <td>$u_B(\alpha) = \frac{\Delta\alpha}{\sqrt{3}} \text{ [rad]}$</td>
-        <td>$u(\alpha)$</td>
-        <td>$n = \tg\alpha_{śr}$</td>
-        <td>$u(n)$</td>
-        <td>$U(n)$</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
+| $\alpha$ | $\alpha_{\text{śr}}$ [°] | $u_A(\alpha)$ | $\Delta\alpha$ [rad] | $u_B(\alpha) = \frac{\Delta\alpha}{\sqrt{3}}$ [rad] | $u(\alpha)$ | $n = \tan\alpha_{\text{śr}}$ | $u(n)$ | $U(n)$ |
+|---|---|---|---|---|---|---|---|---|
+| ... | ... | ... | ... | ... | ... | ... | ... | ... |
