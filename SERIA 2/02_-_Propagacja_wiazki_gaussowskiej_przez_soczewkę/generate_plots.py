@@ -39,6 +39,19 @@ t3_h2 = np.array([9.057203, 1.452106, 6.286764, 6.558136, 4.646739])
 t3_theta_rad = np.array([0.004828, 0.003344, 0.003594, 0.008474, 0.012541])
 t3_theta_deg = np.array([0.276759, 0.191703, 0.206015, 0.485777, 0.718886])
 
+# Sort all series by x-axis values (smallest → largest)
+s1 = np.argsort(w10_vals)
+w10_vals, t1_w_wy, t1_d2, t1_h2 = w10_vals[s1], t1_w_wy[s1], t1_d2[s1], t1_h2[s1]
+t1_theta_rad, t1_theta_deg = t1_theta_rad[s1], t1_theta_deg[s1]
+
+s2 = np.argsort(f_vals)
+f_vals, t2_w_wy, t2_d2, t2_h2 = f_vals[s2], t2_w_wy[s2], t2_d2[s2], t2_h2[s2]
+t2_theta_rad, t2_theta_deg = t2_theta_rad[s2], t2_theta_deg[s2]
+
+s3 = np.argsort(d1_vals)
+d1_vals, t3_w_wy, t3_d2, t3_h2 = d1_vals[s3], t3_w_wy[s3], t3_d2[s3], t3_h2[s3]
+t3_theta_rad, t3_theta_deg = t3_theta_rad[s3], t3_theta_deg[s3]
+
 # ── Figure 1: Series w10 ─────────────────────────────────────────────
 
 fig, axs = plt.subplots(2, 2, figsize=(10, 8))
