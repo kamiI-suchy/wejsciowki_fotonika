@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Propagacja œwiat³a w falowodzie symetrycznym              %%
+%%          Propagacja ï¿½wiatï¿½a w falowodzie symetrycznym              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clc; clear all; close all;
@@ -8,24 +8,24 @@ i=sqrt(-1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                      Parametry badanego falowodu                      %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-ns     = 3.27;               %wspó³czynnik za³amania pod³o¿a
-nf     = 3.28;               %wspó³czynnik za³amania warstwy prowadz¹cej 
-nc     = 3.27;               %wspó³czynnik za³amania pokrycia
-LL     = 100e-6;             %szerokoœæ okna obliczeniowego (kierunek "x") 
-ZZ     = 0.01;               %d³ugoœæ okna obliczeniowego   (kierunek "z")
-Szer   = 4e-6;               %szerokoœæ kana³u falowodowego
-xk1    = 50e-6;              %po³ozenie œrodka kana³u falowodowego
-lambda = 1500e-9;            %d³ugoœæ fali
-xc     = 50e-6;              %po³o¿enie œrodka wi¹zki wejœciowej  
-wp     = 5e-6;               %œrednica wi¹zki wejœciowej (wi¹zka Gaussa)
+ns     = 3.27;               %wspï¿½czynnik zaï¿½amania podï¿½oï¿½a
+nf     = 3.28;               %wspï¿½czynnik zaï¿½amania warstwy prowadzï¿½cej 
+nc     = 3.27;               %wspï¿½czynnik zaï¿½amania pokrycia
+LL     = 100e-6;             %szerokoï¿½ï¿½ okna obliczeniowego (kierunek "x") 
+ZZ     = 0.01;               %dï¿½ugoï¿½ï¿½ okna obliczeniowego   (kierunek "z")
+Szer   = 4e-6;               %szerokoï¿½ï¿½ kanaï¿½u falowodowego
+xk1    = 50e-6;              %poï¿½ozenie ï¿½rodka kanaï¿½u falowodowego
+lambda = 1500e-9;            %dï¿½ugoï¿½ï¿½ fali
+xc     = 50e-6;              %poï¿½oï¿½enie ï¿½rodka wiï¿½zki wejï¿½ciowej  
+wp     = 5e-6;               %ï¿½rednica wiï¿½zki wejï¿½ciowej (wiï¿½zka Gaussa)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                Rozdzielczoœæ siatki obliczeniowej                     %%
+%%                Rozdzielczoï¿½ï¿½ siatki obliczeniowej                     %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-N      = 1024;             %liczba próbek w kierunku poprzecznym (kier."x")
-M      = 3200;             %liczba kroków w kierunku propagacji (kier. "z")
+N      = 1024;             %liczba prï¿½bek w kierunku poprzecznym (kier."x")
+M      = 3200;             %liczba krokï¿½w w kierunku propagacji (kier. "z")
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -40,9 +40,9 @@ Zr   = dz:dz:ZZ;
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%             Poprzeczny rozk³ad pola wi¹zki wejœciowej                 %%
+%%             Poprzeczny rozkï¿½ad pola wiï¿½zki wejï¿½ciowej                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-y = exp(-(2*(Xr-xc)./wp).^2);                 %Rozk³ad funkcji wejœciowej
+y = exp(-(2*(Xr-xc)./wp).^2);                 %Rozkï¿½ad funkcji wejï¿½ciowej
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -126,3 +126,15 @@ xlim([0 LL]);
 %ylim([min(Zr) max(Zr)]);
 xlabel('Wymiar poprzeczny [m]');
 ylabel('Kierunek propagacji [m]');
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         Wyniki pomiarowe                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I_in = max(abs(y).^2);
+I_out = max(abs(YY).^2);
+fprintf('============= Wyniki pomiarowe (falowod symetryczny) =============\n');
+fprintf('Z  = %.2f mm\n', ZZ*1000);
+fprintf('I_in  = %.6f j.w.\n', I_in);
+fprintf('I_out = %.6f j.w.\n', I_out);
+fprintf('I_out / I_in = %.6f j.w.\n', I_out/I_in);
+fprintf('==================================================================\n');

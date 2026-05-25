@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%               Propagacja œwiat³a w oœrodku jednorodnym                %%
+%%               Propagacja ï¿½wiatï¿½a w oï¿½rodku jednorodnym                %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clc; clear all; close all;
@@ -8,20 +8,20 @@ i=sqrt(-1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                      Parametry badanego falowodu                      %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-ns     = 3.4;                %wspó³czynnik za³amania oœrodka
-LL     = 600e-6;             %szerokoœæ okna obliczeniowego (kierunek "x") 
-ZZ     = 0.005;              %d³ugoœæ okna obliczeniowego   (kierunek "z")
-lambda = 633e-9;             %d³ugoœæ fali
-xc     = 300e-6;             %po³o¿enie œrodka wi¹zki wejœciowej  
-wp     = 2e-6;              %œrednica wi¹zki wejœciowej (wi¹zka Gaussa)
+ns     = 3.4;                %wspï¿½czynnik zaï¿½amania oï¿½rodka
+LL     = 600e-6;             %szerokoï¿½ï¿½ okna obliczeniowego (kierunek "x") 
+ZZ     = 0.005;              %dï¿½ugoï¿½ï¿½ okna obliczeniowego   (kierunek "z")
+lambda = 633e-9;             %dï¿½ugoï¿½ï¿½ fali
+xc     = 300e-6;             %poï¿½oï¿½enie ï¿½rodka wiï¿½zki wejï¿½ciowej  
+wp     = 2e-6;              %ï¿½rednica wiï¿½zki wejï¿½ciowej (wiï¿½zka Gaussa)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                Rozdzielczoœæ siatki obliczeniowej                     %%
+%%                Rozdzielczoï¿½ï¿½ siatki obliczeniowej                     %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-N      = 1024;             %liczba próbek w kierunku poprzecznym (kier."x")
-M      = 1200;             %liczba kroków w kierunku propagacji (kier. "z")
+N      = 1024;             %liczba prï¿½bek w kierunku poprzecznym (kier."x")
+M      = 1200;             %liczba krokï¿½w w kierunku propagacji (kier. "z")
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -34,9 +34,9 @@ Zr   = dz:dz:ZZ;
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%             Poprzeczny rozk³ad pola wi¹zki wejœciowej                 %%
+%%             Poprzeczny rozkï¿½ad pola wiï¿½zki wejï¿½ciowej                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-y = exp(-(2*(Xr-xc)./wp).^2);                 %Rozk³ad funkcji wejœciowej
+y = exp(-(2*(Xr-xc)./wp).^2);                 %Rozkï¿½ad funkcji wejï¿½ciowej
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -96,3 +96,16 @@ xlim([0 LL]);
 %ylim([min(Zr) max(Zr)])
 xlabel('Wymiar poprzeczny [m]');
 ylabel('Kierunek propagacji [m]');
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         Wyniki pomiarowe                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I_in = max(abs(y).^2);
+I_out = max(abs(YY).^2);
+fprintf('============== Wyniki pomiarowe (osrodek jednorodny) ==============\n');
+fprintf('Z  = %.2f mm\n', ZZ*1000);
+fprintf('Win = %.2f um\n', wp*1e6);
+fprintf('I_in  = %.6f j.w.\n', I_in);
+fprintf('I_out = %.6f j.w.\n', I_out);
+fprintf('I_out / I_in = %.6f j.w.\n', I_out/I_in);
+fprintf('==================================================================\n');
